@@ -1,0 +1,45 @@
+# example values
+server:
+  address: localhost
+  port: 8080
+
+spring:
+  datasource:
+    username: root
+    password: pwd
+    url: jdbc:mysql://localhost:3306/search_engine
+    jpa:
+      properties:
+        hibernate:
+          dialect: org.hibernate.dialect.MySQL8Dialect
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+indexing-settings:
+  sites:
+    - url: https://www.lenta.ru
+      name: Лента.ру
+    - url: https://www.skillbox.ru
+      name: Skillbox
+    - url: https://www.playback.ru
+      name: PlayBack.Ru
+
+parse-settings:
+  useragent: Mozilla/5.0 (Windows; U; WindowsNT 5.1; en-US; rv1.8.1.6) YandexIndexingMachine
+bad-url:
+  - url: https://www.svetlovka.ru
+    name: svetlovka
+  - url: https://dombulgakova.ru
+    name: dombulgakova
+  - url: https://ipfran.ru
+    name: ipfran
+  - url: https://fseconomy.net
+    name: fseconomyHome
+  - url: https://server.fseconomy.net
+    name: fseconomyHomeServer
+  - url: https://nikoartgallery.com
+    name: nikoartgallery
+
+
